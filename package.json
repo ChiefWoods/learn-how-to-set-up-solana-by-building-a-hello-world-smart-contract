@@ -1,0 +1,24 @@
+{
+  "name": "learn-how-to-set-up-solana-by-building-a-hello-world-smart-contract",
+  "version": "0.0.1",
+  "scripts": {
+    "call:hello-world": "ts-node src/client/main.ts",
+    "clean": "npm run clean:program-rust",
+    "clean:program-rust": "cargo clean --manifest-path=./src/program-rust/Cargo.toml && rm -rf ./dist"
+  },
+  "dependencies": {
+    "@solana/web3.js": "1.87.7",
+    "borsh": "0.7.0",
+    "yaml": "2.3.3"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "1.0.3",
+    "@types/node": "18.18.6",
+    "@types/yaml": "1.9.7",
+    "ts-node": "^10.9.1",
+    "typescript": "4.9.5"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
